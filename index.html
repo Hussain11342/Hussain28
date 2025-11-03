@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SmartMoney Pro</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>SmartMoney Pro</h1>
+      <div class="header-actions">
+        <button id="btnBackup">Backup</button>
+        <button id="btnRestore">Restore</button>
+        <button id="btnExportPDF">Export PDF</button>
+        <label class="switch">
+          <input type="checkbox" id="autoTheme">
+          <span>Auto Theme</span>
+        </label>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="dashboard card">
+        <h2 id="balance">₹0.00</h2>
+        <p id="todaySummary">Today: +₹0.00 / -₹0.00</p>
+        <button id="addTransactionBtn">Add Transaction</button>
+        <div id="transactionList"></div>
+      </section>
+
+      <canvas id="chart"></canvas>
+      <div id="budgetAlert" class="alert" style="display:none;"></div>
+    </main>
+
+    <footer class="app-footer">
+      <p>SmartMoney Pro — Offline-first personal finance. Made for mobile.</p>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
